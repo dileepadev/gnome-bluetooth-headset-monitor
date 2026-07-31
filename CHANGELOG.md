@@ -11,13 +11,20 @@ Changes are organized into the following categories:
 
 ## [Unreleased]
 
-- Changes for the next release are available in development branches.
+- Prepare the v1.0.1 release by renaming the repository to `gnome-bluetooth-headset-monitor` and adding GNOME Shell 50.1 support.
+
+## [v1.0.1] - 2026-07-31
+
+### Changed - v1.0.1
+
+- Renamed the repository to `gnome-bluetooth-headset-monitor`.
+- Updated the extension metadata to target GNOME Shell `46`, `50`, and `50.1`.
 
 ## [v1.0.0] - 2026-06-03
 
 ### Added - v1.0.0
 
-- Initial public release of the *bluetooth-headset-monitor* repository.
+- Initial public release of the *gnome-bluetooth-headset-monitor* repository.
 <!-- e.g., -->
 <!-- Unreleased -->
 <!-- v2.0.0 -->
@@ -25,5 +32,6 @@ Changes are organized into the following categories:
 <!-- v1.0.0 -->
 <!-- v0.0.1 -->
 
-[Unreleased]: https://github.com/dileepadev/bluetooth-headset-monitor/branches
-[v1.0.0]: https://github.com/dileepadev/bluetooth-headset-monitor/releases/tag/v1.0.0
+[Unreleased]: https://github.com/dileepadev/gnome-bluetooth-headset-monitor/branches
+[v1.0.1]: https://github.com/dileepadev/gnome-bluetooth-headset-monitor/releases/tag/v1.0.1
+[v1.0.0]: https://github.com/dileepadev/gnome-bluetooth-headset-monitor/releases/tag/v1.0.0

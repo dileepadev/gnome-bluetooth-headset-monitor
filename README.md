@@ -20,7 +20,7 @@ Bluetooth Headset Monitor is a GNOME Shell extension that adds a headset indicat
 
 ## Supported GNOME Versions
 
-The extension metadata currently targets GNOME Shell `46`, `47`, and `48`.
+The extension metadata currently targets GNOME Shell `46`, `50`, and `50.1`.
 
 ## How It Works
 
@@ -74,7 +74,7 @@ Low-battery notifications are de-duplicated per connected device until the batte
 
 ## Preferences
 
-The preferences window currently exposes four settings through GSettings schema `org.gnome.shell.extensions.bluetooth-headset-monitor`:
+The preferences window currently exposes four settings through GSettings schema `org.gnome.shell.extensions.gnome-bluetooth-headset-monitor`:
 
 - `show-notifications`: default `true`; controls connect, disconnect, and low-battery notifications.
 - `battery-warning-threshold`: default `15`; valid range `1` to `100`.
@@ -84,7 +84,7 @@ The preferences window currently exposes four settings through GSettings schema 
 ## Project Structure
 
 ```text
-bluetooth-headset-monitor@dileepa.dev/
+gnome-bluetooth-headset-monitor@dileepa.dev/
 ├── bluetoothManager.js
 ├── extension.js
 ├── icons/
@@ -92,7 +92,7 @@ bluetooth-headset-monitor@dileepa.dev/
 ├── metadata.json
 ├── prefs.js
 ├── schemas/
-│   └── org.gnome.shell.extensions.bluetooth-headset-monitor.gschema.xml
+│   └── org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml
 ├── stylesheet.css
 └── ui/
     ├── deviceMenuItem.js
@@ -143,7 +143,7 @@ Responsible for the libadwaita preferences UI.
 If this repository already lives at:
 
 ```text
-~/.local/share/gnome-shell/extensions/bluetooth-headset-monitor@dileepa.dev
+~/.local/share/gnome-shell/extensions/gnome-bluetooth-headset-monitor@dileepa.dev
 ```
 
 you can compile the schema and load the extension directly from there.
@@ -163,13 +163,13 @@ glib-compile-schemas schemas
 You can enable the extension with the GNOME Extensions app or from the command line:
 
 ```bash
-gnome-extensions enable bluetooth-headset-monitor@dileepa.dev
+gnome-extensions enable gnome-bluetooth-headset-monitor@dileepa.dev
 ```
 
 To disable it:
 
 ```bash
-gnome-extensions disable bluetooth-headset-monitor@dileepa.dev
+gnome-extensions disable gnome-bluetooth-headset-monitor@dileepa.dev
 ```
 
 ## Development Workflow
@@ -184,10 +184,10 @@ Typical local workflow:
 Useful commands:
 
 ```bash
-gnome-extensions info bluetooth-headset-monitor@dileepa.dev
-gnome-extensions prefs bluetooth-headset-monitor@dileepa.dev
-gnome-extensions disable bluetooth-headset-monitor@dileepa.dev
-gnome-extensions enable bluetooth-headset-monitor@dileepa.dev
+gnome-extensions info gnome-bluetooth-headset-monitor@dileepa.dev
+gnome-extensions prefs gnome-bluetooth-headset-monitor@dileepa.dev
+gnome-extensions disable gnome-bluetooth-headset-monitor@dileepa.dev
+gnome-extensions enable gnome-bluetooth-headset-monitor@dileepa.dev
 ```
 
 ## Testing Checklist
@@ -215,7 +215,7 @@ Check the following:
 - The extension is enabled:
 
 ```bash
-gnome-extensions info bluetooth-headset-monitor@dileepa.dev
+gnome-extensions info gnome-bluetooth-headset-monitor@dileepa.dev
 ```
 
 ### Battery always shows `Unknown`

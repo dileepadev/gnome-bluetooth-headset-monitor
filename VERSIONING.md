@@ -79,4 +79,4 @@ git log v1.1.0..v1.2.0
 
 ## Questions or Issues?
 
-If you have questions about the versioning strategy or encounter version-related problems, feel free to open an issue on the [GitHub repository](https://github.com/dileepadev/bluetooth-headset-monitor/issues).
+If you have questions about the versioning strategy or encounter version-related problems, feel free to open an issue on the [GitHub repository](https://github.com/dileepadev/gnome-bluetooth-headset-monitor/issues).
