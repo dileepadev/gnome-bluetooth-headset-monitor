@@ -15,6 +15,7 @@
  *
  * SPDX-License-Identifier: MIT
  */
+import GLib from 'gi://GLib';
 import {Extension} from 'resource:///org/gnome/shell/extensions/extension.js';
 import * as Main from 'resource:///org/gnome/shell/ui/main.js';
 
@@ -32,6 +33,7 @@ export default class BluetoothHeadsetMonitorExtension extends Extension {
             extensionPath
         );
         this._snapshot = new Map();
+        this._pendingNotifications = new Map();
         this._initialized = false;
         this._devicesChangedId = this._bluetoothManager.connect('devices-changed', () => {
             this._handleDevicesChanged();
@@ -56,6 +58,10 @@ export default class BluetoothHeadsetMonitorExtension extends Extension {
         }
 
         this._snapshot.clear();
+
+        for (const timerId of this._pendingNotifications.values())
+            GLib.Source.remove(timerId);
+        this._pendingNotifications.clear();
 
         this._indicator?.destroy();
         this._indicator = null;
@@ -117,11 +123,24 @@ export default class BluetoothHeadsetMonitorExtension extends Extension {
         if (!this._settings.get_boolean('show-notifications'))
             return;
 
-        const detail = device.battery === null
-            ? 'Battery: Unknown'
-            : `Battery: ${device.battery}%`;
+        // Battery1 may not be populated yet; defer briefly to get accurate level
+        if (device.battery === null) {
+            const timerId = GLib.timeout_add(GLib.PRIORITY_DEFAULT, 1500, () => {
+                this._pendingNotifications.delete(device.path);
+                if (this._bluetoothManager.getDeviceName(device.path) === null)
+                    return GLib.SOURCE_REMOVE;
+                const battery = this._bluetoothManager.getDeviceBattery(device.path);
+                const detail = battery === null
+                    ? 'Battery: Unknown'
+                    : `Battery: ${battery}%`;
+                Main.notify(`${device.name} connected`, detail);
+                return GLib.SOURCE_REMOVE;
+            });
+            this._pendingNotifications.set(device.path, timerId);
+            return;
+        }
 
-        Main.notify(`${device.name} connected`, detail);
+        Main.notify(`${device.name} connected`, `Battery: ${device.battery}%`);
     }
 
     _notifyDisconnection(name) {
