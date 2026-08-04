@@ -12,7 +12,7 @@ Shows connected Bluetooth headset information in the GNOME top bar.
 {
   "name": "Bluetooth Headset Monitor",
   "description": "Show connected Bluetooth headset information in the GNOME top bar",
-  "uuid": "gnome-bluetooth-headset-monitor@dileepa.dev",
+  "uuid": "bluetooth-headset-monitor@dileepa.dev",
   "settings-schema": "org.gnome.shell.extensions.gnome-bluetooth-headset-monitor",
   "url": "https://github.com/dileepadev/gnome-bluetooth-headset-monitor",
   "version": 1,
@@ -28,7 +28,7 @@ Shows connected Bluetooth headset information in the GNOME top bar.
 
    ```bash
    git clone https://github.com/dileepadev/gnome-bluetooth-headset-monitor.git \
-   ~/.local/share/gnome-shell/extensions/gnome-bluetooth-headset-monitor@dileepa.dev
+   ~/.local/share/gnome-shell/extensions/bluetooth-headset-monitor@dileepa.dev
    ```
 
 2. **Restart GNOME Shell** in order to reload the extensions:
@@ -38,7 +38,7 @@ Shows connected Bluetooth headset information in the GNOME top bar.
 3. **Enable the extension**:
 
    ```bash
-   gnome-extensions enable gnome-bluetooth-headset-monitor@dileepa.dev
+   gnome-extensions enable bluetooth-headset-monitor@dileepa.dev
    ```
 
 ## Credits

@@ -62,7 +62,7 @@ The preferences window exposes the following GSettings keys:
 ## Project Structure
 
 ```text
-gnome-bluetooth-headset-monitor@dileepa.dev/
+bluetooth-headset-monitor@dileepa.dev/
 ├── bluetoothManager.js
 ├── extension.js
 ├── icons/
@@ -111,10 +111,10 @@ Typical local workflow:
 Useful commands:
 
 ```bash
-gnome-extensions info gnome-bluetooth-headset-monitor@dileepa.dev
-gnome-extensions prefs gnome-bluetooth-headset-monitor@dileepa.dev
-gnome-extensions disable gnome-bluetooth-headset-monitor@dileepa.dev
-gnome-extensions enable gnome-bluetooth-headset-monitor@dileepa.dev
+gnome-extensions info bluetooth-headset-monitor@dileepa.dev
+gnome-extensions prefs bluetooth-headset-monitor@dileepa.dev
+gnome-extensions disable bluetooth-headset-monitor@dileepa.dev
+gnome-extensions enable bluetooth-headset-monitor@dileepa.dev
 ```
 
 ## Testing Checklist
