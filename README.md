@@ -31,11 +31,17 @@ Shows connected Bluetooth headset information in the GNOME top bar.
    ~/.local/share/gnome-shell/extensions/bluetooth-headset-monitor@dileepa.dev
    ```
 
-2. **Restart GNOME Shell** in order to reload the extensions:
+2. **Compile GSettings schemas** in the extension directory:
+
+   ```bash
+   glib-compile-schemas ~/.local/share/gnome-shell/extensions/bluetooth-headset-monitor@dileepa.dev/schemas
+   ```
+
+3. **Restart GNOME Shell** in order to reload the extensions:
    - **X11**: Press `Alt` + `F2`, type `r`, then press `Enter`.
    - **Wayland**: Log out and log back in.
 
-3. **Enable the extension**:
+4. **Enable the extension**:
 
    ```bash
    gnome-extensions enable bluetooth-headset-monitor@dileepa.dev

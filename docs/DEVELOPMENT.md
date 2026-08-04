@@ -152,6 +152,16 @@ RSSI display requires both of these conditions:
 1. `Show signal strength` is enabled in preferences
 2. BlueZ exposes `RSSI` for the device
 
+### Preferences fail with missing `gschemas.compiled`
+
+If you see an error like `Failed to open .../schemas/gschemas.compiled`, compile schemas in the installed extension directory:
+
+```bash
+glib-compile-schemas ~/.local/share/gnome-shell/extensions/bluetooth-headset-monitor@dileepa.dev/schemas
+```
+
+Then reload GNOME Shell or log out and log back in.
+
 ## Current Scope and Limits
 
 This repository currently implements the core panel indicator, BlueZ-backed device discovery, device menu, notifications, and preferences described above.
