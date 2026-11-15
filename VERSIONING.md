@@ -29,8 +29,8 @@ extension ZIP.
 6. Tag the reviewed release as `v1.1.0` and publish a GitHub release with the
    matching changelog and `dist/*.shell-extension.zip` asset.
 
-The current v1.1.0 work is a development candidate. It does not create a tag,
-publish a release, or establish GNOME 51 compatibility by static checks alone.
+Published releases, their notes, and the install ZIPs are on the
+[GitHub releases page](https://github.com/dileepadev/gnome-bluetooth-headset-monitor/releases).
 
 References: [GNOME extension metadata](https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required)
 and [release issue #2](https://github.com/dileepadev/gnome-bluetooth-headset-monitor/issues/2).
