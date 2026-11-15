@@ -1,0 +1,180 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR Dileepa Bandara
+# This file is distributed under the same license as the bluetooth-headset-monitor package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: bluetooth-headset-monitor 1.1.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-11-13 12:50+0530\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: extension.js:77 ui/deviceMenuItem.js:40
+msgid "Unknown device"
+msgstr ""
+
+#: extension.js:78 ui/deviceMenuItem.js:42
+msgid "Battery: Unknown"
+msgstr ""
+
+#: extension.js:79 ui/deviceMenuItem.js:42
+#, javascript-format
+msgid "Battery: %d%%"
+msgstr ""
+
+#: extension.js:81
+#, javascript-format
+msgid "%s connected"
+msgstr ""
+
+#: extension.js:83
+#, javascript-format
+msgid "%s disconnected"
+msgstr ""
+
+#: extension.js:85
+#, javascript-format
+msgid "%s battery low"
+msgstr ""
+
+#: extension.js:85
+#, javascript-format
+msgid "%d%% remaining"
+msgstr ""
+
+#: prefs.js:13 ui/panelIndicator.js:17 ui/panelIndicator.js:29
+msgid "Bluetooth Headset Monitor"
+msgstr ""
+
+#: prefs.js:17
+msgid "Behavior"
+msgstr ""
+
+#: prefs.js:18
+msgid ""
+"Control notifications and which device details appear in the panel menu."
+msgstr ""
+
+#: prefs.js:22
+msgid "Show notifications"
+msgstr ""
+
+#: prefs.js:23
+msgid ""
+"Notify when headsets connect, disconnect, or reach the low battery threshold."
+msgstr ""
+
+#: prefs.js:29
+msgid "Show device address"
+msgstr ""
+
+#: prefs.js:30
+msgid "Include the Bluetooth MAC address in each device entry."
+msgstr ""
+
+#: prefs.js:36
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:20
+msgid "Show signal strength"
+msgstr ""
+
+#: prefs.js:37
+msgid "Display RSSI in dBm when BlueZ reports it."
+msgstr ""
+
+#: prefs.js:43
+msgid "Low battery"
+msgstr ""
+
+#: prefs.js:47
+msgid "Battery warning threshold"
+msgstr ""
+
+#: prefs.js:48
+msgid ""
+"Send a low battery notification when a connected device reaches this "
+"percentage."
+msgstr ""
+
+#: ui/deviceMenuItem.js:43
+msgid "Status: Connected"
+msgstr ""
+
+#: ui/deviceMenuItem.js:44
+#, javascript-format
+msgid "Supported profiles: %s"
+msgstr ""
+
+#: ui/deviceMenuItem.js:47
+#, javascript-format
+msgid "Address: %s"
+msgstr ""
+
+#: ui/deviceMenuItem.js:49
+#, javascript-format
+msgid "Signal: %d dBm"
+msgstr ""
+
+#: ui/panelIndicator.js:38
+msgid "Open Bluetooth Settings"
+msgstr ""
+
+#: ui/panelIndicator.js:39
+msgid "Refresh cached devices"
+msgstr ""
+
+#: ui/panelIndicator.js:90
+msgid "Bluetooth Settings unavailable"
+msgstr ""
+
+#: ui/panelIndicator.js:90
+msgid "Install GNOME Settings to open the Bluetooth panel."
+msgstr ""
+
+#: ui/panelIndicator.js:97
+msgid "Could not open Bluetooth Settings"
+msgstr ""
+
+#: ui/panelIndicator.js:97
+msgid "Try opening GNOME Settings from the application menu."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:7
+msgid "Show headset notifications"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:8
+msgid ""
+"Notify when compatible Bluetooth audio devices connect, disconnect, or reach "
+"the low battery threshold."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:14
+msgid "Low battery threshold"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:15
+msgid ""
+"The battery percentage that triggers a low battery notification for a "
+"connected headset."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:21
+msgid "Display RSSI values in the device menu when BlueZ provides them."
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:25
+msgid "Show Bluetooth address"
+msgstr ""
+
+#: schemas/org.gnome.shell.extensions.gnome-bluetooth-headset-monitor.gschema.xml:26
+msgid ""
+"Display the Bluetooth MAC address for each connected device in the menu."
+msgstr ""
