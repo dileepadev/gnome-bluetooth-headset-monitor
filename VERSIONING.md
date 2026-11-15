@@ -1,82 +1,37 @@
-# Versioning
+# Versioning and release process
 
-This project follows a versioning pattern similar to [Semantic Versioning](https://semver.org/) (SemVer) for managing releases.
+Git releases use `MAJOR.MINOR.PATCH` tags, such as `v1.1.0`. The integer `version`
+in `metadata.json` is the GNOME extension update identifier; it is not a SemVer
+string. Check the previous distributed/published value before choosing its next
+integer value. Keep the extension UUID and GSettings schema/path stable so
+upgrades retain user preferences.
 
-## Table of Contents
+`package.json` and `package-lock.json` describe development tooling only. Do not
+use `npm version` to version the GNOME extension. No npm dependencies ship in the
+extension ZIP.
 
-- [Versioning](#versioning)
-  - [Table of Contents](#table-of-contents)
-  - [Format](#format)
-    - [Examples](#examples)
-  - [Release Process](#release-process)
-    - [Typical Steps](#typical-steps)
-  - [Questions or Issues?](#questions-or-issues)
+## Release steps
 
-## Format
+1. Complete the work in the release issue and confirm the extension works on the
+   tested GNOME version.
+2. Update the tested Shell versions in `metadata.json`, `README.md`, and
+   `docs/DEVELOPMENT.md`. Use major Shell versions (`50` also covers `50.1`);
+   do not advertise unverified compatibility as tested.
+3. Set the next integer extension version, finalize `CHANGELOG.md`, and document
+   known limitations and migration notes. Development builds keep the existing
+   integer until the release.
+4. Run `npm ci`, `npm run check`, and `npm run pack`. The packaging script freshly
+   compiles schemas and any translation catalogs and includes only runtime files
+   and applicable notices. Test clean install and upgrade from the resulting ZIP
+   in live GNOME sessions, including persisted preferences.
+5. Review and commit the release changes on the feature/release branch, then merge
+   through the repository's PR process.
+6. Tag the reviewed release as `v1.1.0` and publish a GitHub release with the
+   matching changelog and `dist/*.shell-extension.zip` asset. Publish to
+   extensions.gnome.org separately if that distribution channel is used.
 
-Version numbers follow the structure:
+The current v1.1.0 work is a development candidate. It does not create a tag,
+publish a release, or establish GNOME 51 compatibility by static checks alone.
 
-`MAJOR.MINOR.PATCH`
-
-- **MAJOR** – Incompatible API changes or major breaking updates  
-- **MINOR** – Backward-compatible functionality and feature additions  
-- **PATCH** – Backward-compatible bug fixes and small improvements
-
-### Examples
-
-| Version | Meaning                          |
-| ------- | -------------------------------- |
-| `0.1.0` | First public release / early dev |
-| `0.1.1` | Bug fix                          |
-| `0.2.0` | New non‑breaking feature         |
-| `1.0.0` | Official stable release          |
-| `1.0.1` | Bug fix after release            |
-| `1.1.0` | New feature added                |
-| `2.0.0` | Major breaking change            |
-
-## Release Process
-
-All notable changes are documented in the [CHANGELOG.md](CHANGELOG.md) file.
-
-### Typical Steps
-
-1. Complete all features and fixes planned for the release
-2. Update the `CHANGELOG.md` with categorized entries:  
-   - **Added**, **Changed**, **Fixed**, **Removed**
-3. Bump the version number in `package.json` (and `package-lock.json` if needed)
-4. Commit changes with a version-related message (e.g. `chore: Release v1.2.0`)
-5. Tag the release:
-
-   ```bash
-   git tag v1.2.0
-   git push origin v1.2.0
-    ````
-
-6. (Optional) Create a GitHub release and paste the relevant changelog section
-
-## Pre-release Versions
-
-For beta or release candidates, we use suffixes:
-
-- `1.2.0-beta.1` – Beta release
-- `2.0.0-rc.1` – Release candidate
-
-These versions are intended for testing and may not be fully stable.
-
-## Viewing Tags & Differences
-
-List all version tags:
-
-```bash
-git tag
-```
-
-View differences between versions:
-
-```bash
-git log v1.1.0..v1.2.0
-```
-
-## Questions or Issues?
-
-If you have questions about the versioning strategy or encounter version-related problems, feel free to open an issue on the [GitHub repository](https://github.com/dileepadev/gnome-bluetooth-headset-monitor/issues).
+References: [GNOME extension metadata](https://gjs.guide/extensions/overview/anatomy.html#metadata-json-required)
+and [release issue #2](https://github.com/dileepadev/gnome-bluetooth-headset-monitor/issues/2).

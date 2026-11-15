@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<schemalist>
+<schemalist gettext-domain="bluetooth-headset-monitor">
     <schema id="org.gnome.shell.extensions.gnome-bluetooth-headset-monitor"
         path="/org/gnome/shell/extensions/gnome-bluetooth-headset-monitor/">
         <key name="show-notifications" type="b">
@@ -24,6 +24,18 @@
             <default>false</default>
             <summary>Show Bluetooth address</summary>
             <description>Display the Bluetooth MAC address for each connected device in the menu.</description>
+        </key>
+        <key name="show-battery-in-panel" type="b">
+            <default>true</default>
+            <summary>Show battery in the top bar</summary>
+            <description>Show the lowest battery percentage of the connected headsets next to the
+                panel icon, highlighted at or below the low battery threshold.</description>
+        </key>
+        <key name="show-when-disconnected" type="b">
+            <default>false</default>
+            <summary>Show the icon when no headset is connected</summary>
+            <description>Keep a dimmed panel icon visible while paired headsets are disconnected,
+                so they can be connected from the menu.</description>
         </key>
     </schema>
 </schemalist>

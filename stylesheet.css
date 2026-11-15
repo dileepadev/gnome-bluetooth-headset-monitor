@@ -1,11 +1,36 @@
-.bluetooth-headset-monitor-menu-header {
-	font-weight: 700;
+/* Same spacing as AppIndicator icons (for example ChatGPT and Claude) in
+   Ubuntu's default compact mode: 10px button padding and no extra icon padding
+   or margin, so each side of the icon has 10px. */
+#panel .panel-button.bluetooth-headset-monitor-indicator {
+    -natural-hpadding: 10px;
+    -minimum-hpadding: 6px;
 }
 
+#panel .panel-button.bluetooth-headset-monitor-indicator .system-status-icon {
+    padding: 0;
+    margin: 0;
+}
+
+.bluetooth-headset-monitor-menu-header,
 .bluetooth-headset-monitor-device-name {
-	font-weight: 700;
+    font-weight: 700;
+}
+
+.bluetooth-headset-monitor-device {
+    max-width: 30em;
+    spacing: 0.25em;
 }
 
 .bluetooth-headset-monitor-device-details {
-	color: rgba(255, 255, 255, 0.78);
+    opacity: 0.8;
+}
+
+.bluetooth-headset-monitor-panel-battery {
+    font-feature-settings: "tnum";
+}
+
+/* At or below the low battery threshold. */
+.bluetooth-headset-monitor-panel-battery.low {
+    color: #f66151;
+    font-weight: bold;
 }

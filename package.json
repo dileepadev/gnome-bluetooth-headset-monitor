@@ -1,0 +1,21 @@
+{
+  "name": "gnome-bluetooth-headset-monitor",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "lint": "eslint .",
+    "test": "node tests/devices.test.mjs && node tests/devices-extra.test.mjs && node tests/notifications.test.mjs",
+    "test:integration": "gjs -m tests/bluetoothManager.test.js",
+    "check": "python3 scripts/check.py",
+    "pack": "python3 scripts/package.py"
+  },
+  "devDependencies": {
+    "eslint": "10.14.0"
+  },
+  "engines": {
+    "node": ">=22.13.0"
+  },
+  "overrides": {
+    "minimatch": "11.0.1"
+  }
+}
