@@ -27,8 +27,7 @@ extension ZIP.
 5. Review and commit the release changes on the feature/release branch, then merge
    through the repository's PR process.
 6. Tag the reviewed release as `v1.1.0` and publish a GitHub release with the
-   matching changelog and `dist/*.shell-extension.zip` asset. Publish to
-   extensions.gnome.org separately if that distribution channel is used.
+   matching changelog and `dist/*.shell-extension.zip` asset.
 
 The current v1.1.0 work is a development candidate. It does not create a tag,
 publish a release, or establish GNOME 51 compatibility by static checks alone.

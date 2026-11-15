@@ -9,4 +9,3 @@ Release v1.1.0 is tracked in [issue #2](https://github.com/dileepadev/gnome-blue
 - [x] Tests, CI, mock-BlueZ integration, reproducible ZIP, MIT licensing (theme icon, nothing bundled), and documentation with dark-mode screenshots.
 - [x] Confirmed working in daily use with a real headset on a GNOME 51 desktop.
 - [x] Commit, merge, tag `v1.1.0`, and publish the GitHub release with the ZIP.
-- [ ] Optional: submit to extensions.gnome.org.
